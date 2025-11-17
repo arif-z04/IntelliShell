@@ -50,8 +50,8 @@ public class SuggestionEngine {
             for (int j = 1; j <= s2.length(); j++) {
                 int cost = s1.charAt(i - 1) == s2.charAt(j - 1) ? 0 : 1;
                 dp[i][j] = Math.min(Math.min(dp[i - 1][j] + 1, // deletion
-                        dp[i][j - 1] + 1), // insertion
-                        dp[i - 1][j - 1] + cost);       // substitution
+                        dp[i][j - 1] + 1),                     // insertion
+                        dp[i - 1][j - 1] + cost);              // substitution
             }
         }
         return dp[s1.length()][s2.length()];
