@@ -1,0 +1,12 @@
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/ExitCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/HistoryManager.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/HelpCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/ShellCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/ListCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/CdCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/SuggestionEngine.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/CommandParser.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/commands/MkdirCommand.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/ShellState.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/shell/IntelliShell.java
+/home/noir/Documents/Java_project/IntelliShell/src/main/java/intellishell/ml/MarkovModel.java
