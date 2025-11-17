@@ -1,5 +1,17 @@
 # IntelliShell
+```
 
+ █████             █████             ████  ████   ███   █████████  █████               ████  ████ 
+░░███             ░░███             ░░███ ░░███  ░░░   ███░░░░░███░░███               ░░███ ░░███ 
+ ░███  ████████   ███████    ██████  ░███  ░███  ████ ░███    ░░░  ░███████    ██████  ░███  ░███ 
+ ░███ ░░███░░███ ░░░███░    ███░░███ ░███  ░███ ░░███ ░░█████████  ░███░░███  ███░░███ ░███  ░███ 
+ ░███  ░███ ░███   ░███    ░███████  ░███  ░███  ░███  ░░░░░░░░███ ░███ ░███ ░███████  ░███  ░███ 
+ ░███  ░███ ░███   ░███ ███░███░░░   ░███  ░███  ░███  ███    ░███ ░███ ░███ ░███░░░   ░███  ░███ 
+ █████ ████ █████  ░░█████ ░░██████  █████ █████ █████░░█████████  ████ █████░░██████  █████ █████
+░░░░░ ░░░░ ░░░░░    ░░░░░   ░░░░░░  ░░░░░ ░░░░░ ░░░░░  ░░░░░░░░░  ░░░░ ░░░░░  ░░░░░░  ░░░░░ ░░░░░ 
+                                                                                    by Arifuzzaman
+                                                                                    v1.0.0
+```
 IntelliShell is a small, object-oriented Java console shell with a simple machine-learning suggestion engine using a first-order Markov model.
 
 ## Features
@@ -77,33 +89,6 @@ When you enter an unknown command, IntelliShell tries to:
 
 History is automatically saved to `~/.intellishell_history` and reloaded on startup, improving suggestions over time.
 
-## Project Structure
-
-```
-src/main/java/intellishell/
-├─ shell/
-│  ├─ IntelliShell.java        (main loop, command registry)
-│  ├─ ShellState.java          (current dir, history)
-│  ├─ CommandParser.java       (parse input)
-│  ├─ SuggestionEngine.java    (ML + fuzzy matching)
-│  ├─ HistoryManager.java      (persist to ~/.intellishell_history)
-│  └─ commands/
-│     ├─ ShellCommand.java     (abstract base)
-│     ├─ HelpCommand.java
-│     ├─ ExitCommand.java
-│     ├─ ListCommand.java      (ls)
-│     ├─ CdCommand.java        (cd)
-│     └─ MkdirCommand.java     (mkdir)
-└─ ml/
-   └─ MarkovModel.java         (first-order transitions)
-
-src/test/java/intellishell/
-├─ shell/
-│  ├─ CommandParserTest.java    (5 tests)
-│  └─ SuggestionEngineTest.java (3 tests)
-└─ ml/
-   └─ MarkovModelTest.java      (4 tests)
-```
 
 ## OOP Concepts Demonstrated
 
