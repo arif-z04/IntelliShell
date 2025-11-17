@@ -1,14 +1,14 @@
 package intellishell.shell.commands;
 
-import java.util.Map;
 import intellishell.shell.ShellState;
 
+import java.util.Map;
+
 public class HelpCommand extends ShellCommand {
+    private final Map<String, ShellCommand> registry;
 
-    private final Map<String, ShellCommand> commands;
-
-    public HelpCommand(Map<String, ShellCommand> commands) {
-        this.commands = commands;
+    public HelpCommand(Map<String, ShellCommand> registry) {
+        this.registry = registry;
     }
 
     @Override
@@ -18,16 +18,14 @@ public class HelpCommand extends ShellCommand {
 
     @Override
     public String getDescription() {
-        return "Display available commands";
+        return "Show available commands";
     }
 
     @Override
     public void execute(String[] args, ShellState state) {
-        System.out.println("\n=== Available Commands ===");
-        for (var entry : commands.entrySet()) {
-            ShellCommand cmd = entry.getValue();
-            System.out.printf("  %-10s %s\n", entry.getKey(), cmd.getDescription());
+        System.out.println("Available commands:");
+        for (ShellCommand c : registry.values()) {
+            System.out.printf("  %-10s - %s%n", c.getName(), c.getDescription());
         }
-        System.out.println();
     }
 }
