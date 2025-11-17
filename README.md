@@ -25,7 +25,7 @@ IntelliShell is a small, object-oriented Java console shell with a simple machin
 
 **Requirements:** Java 21+ and Maven 3.6+
 
-### Option 1: One-Click Run (Recommended) ⭐
+### Option 1: One-Click Run (Recommended)
 
 #### **Linux / Mac:**
 ```bash
@@ -108,12 +108,6 @@ History is automatically saved to `~/.intellishell_history` and reloaded on star
 - **Smart suggestions**: Combines Markov prediction + fuzzy matching.
 - **Clean code**: Proper separation of concerns (shell, commands, ML).
 
-Perfect for:
-- Academic submission (Java OOP + ML)
-- Portfolio demonstration
-- Learning object-oriented design patterns
-- Understanding custom shell/REPL architectures
-
 ## Future Enhancements
 
 - Command aliases and shell builtins (pushd, popd, etc.)
@@ -122,4 +116,8 @@ Perfect for:
 - Readline/Jline integration for better UX
 - Plugin system for custom commands
 - Performance optimizations for large history
+- Adding AI Commands
+- Adding Networking Commands
+- Adding System Commands
 
+---
