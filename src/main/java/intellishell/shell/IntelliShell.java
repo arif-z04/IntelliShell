@@ -6,6 +6,7 @@ import intellishell.shell.commands.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 import java.util.*;
@@ -34,11 +35,20 @@ public class IntelliShell {
         commands.put("ls", new ListCommand());
         commands.put("cd", new CdCommand());
         commands.put("mkdir", new MkdirCommand());
+        commands.put("pwd", new PwdCommand());
 
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Welcome to IntelliShell (type 'help' for commands)");
-
+        // show the welcome message from menu.txt file
+        try {
+            List<String> menuLines = Files.readAllLines(Path.of("menu.txt"));
+            for (String menuLine : menuLines) {
+                System.out.println(menuLine);
+            }
+        } catch (IOException e) {
+            System.out.println("Welcome to IntelliShell! (menu.txt not found)");
+        }
+        
         while (true) {
             System.out.print(state.getCurrentDir().toString() + " $ ");
             String line = in.readLine();

@@ -44,4 +44,12 @@ public class CommandParserTest {
         assertEquals("", p.name);
         assertEquals(0, p.args.length);
     }
+
+    // Test pwdCommands
+    @Test
+    public void testParseOnlyWhitespace() {
+        CommandParser.Parsed p = CommandParser.parse("     ");
+        assertEquals("", p.name);
+        assertEquals(0, p.args.length);
+    }
 }
